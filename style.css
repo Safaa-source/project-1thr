@@ -9,11 +9,44 @@ body {
     text-decoration: none;
     transition: color 0.3s;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: #006838;
     font-size: larger;
 }
 
+/* Style for hidden dropdown lists */
+.navbar .drop-down {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+/* Style for dropdown list items */
+.navbar .drop-down li {
+    padding: 8px 15px;
+    text-align: left;
+    list-style: none;
+}
+
+.navbar .drop-down li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar .drop-down li a:hover {
+    color: #006838;
+}
+
+/* Show dropdown on hover */
+.navbar li:hover > .drop-down {
+    display: block;
+}
 
 
 /* Text Animation */
@@ -103,6 +136,17 @@ body {
     background-image: url(images/new-download.jpg);
 }
 
+
+.results-home-page{
+    background-image: url(./images/results-home-page.jpg);
+}
+.results-table table td{
+    width: 50%;
+}
+
+.booking-home-page{
+    background-image: url(./images/booking-home-img.jpeg);
+}
 
 
 /* Home-Page & Service-Page Fixed Image */
@@ -202,10 +246,18 @@ body {
     .table-middle-bo{
         display: none;
     }
+    .game-results{
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media (min-width:451px) and (max-width:650px){
     .fixed-img-text{
         font-size: 44px;
+    }
+    .game-results{
+        display: flex;
+        flex-direction: row;
     }
 }
 @media (min-width:451px) and (max-width:950px) {
@@ -250,3 +302,13 @@ body {
         height: 0vh;
     }
 }
+
+
+
+
+
+
+
+
+
+ 

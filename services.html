@@ -26,18 +26,44 @@
 <body>
     <!-- Transparent Navbar -->
     <nav class="navbar top-0 left-0 w-[100%] z-10 h-[10vh] flex justify-between items-center py-1 px-2 text-[#fff] fixed">
-        <div class="navbar-logo w-2/12 ">
-            <a href="./index.html"><img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png" alt="Logo"></a>
-            <!-- Replace with your logo -->
+        <div class="navbar-logo w-2/12">
+            <a href="./index.html">
+                <img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png" alt="Logo">
+            </a>
         </div>
+    
         <ul class="flex lg:space-x-4 font-thin w-8/12 uppercase gap-2 text-sm ">
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
+            <li class="list-2">
+                <a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">About</a>
+                <!-- Hidden dropdown menu -->
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">COACHES</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">Community</a>
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">HISTORY</a></li>
+                    <li><a href="#">PROGRAM</a></li>
+                </ul>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">Results</a>
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="./results.html">TEAM RESULTS</a></li>
+                    <li><a href="./services.html">SERVICES</a></li>
+                    <li><a href="./booking.html">BOOKING FORM</a></li>
+                    <li><a href="./events.html">EVENTS & SCHEDULE</a></li>
+                </ul>
+            </li>
         </ul>
+        <!-- Social Icons and other sections remain unchanged -->
         <div class="flex w-2/12 list-1">
             <ul class="flex lg:gap-6 gap-2 justify-center items-center text-md ">
                 <li class="list-2">
@@ -63,31 +89,6 @@
                 </li>
             </ul>
         </div>
-
-        <div class="relative icon-1 lg:hidden">
-            <!-- Hidden Checkbox for Toggle -->
-            <input type="checkbox" id="menu-toggle" class="hidden">
-
-            <!-- Label as Menu Icon -->
-            <label for="menu-toggle" class="cursor-pointer text-2xl">
-                <i class="icon-1 lg:hidden text-black text-xl pr-3 fa-solid fa-bars"></i>
-            </label>
-
-            <!-- Hidden Menu -->
-            <div id="menu"
-                class="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-lg mt-2 w-48 hidden">
-                <ul class="flex flex-col text-left">
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
     </nav>
 
     <main>
@@ -100,13 +101,16 @@
             </div>
         </section>
 
+        <!--logo + text-section -->
         <section class="flex flex-col items-center mt-24">
             <img class="w-[200px] h-[200px] max-sm:w-[150px] max-sm:h-[150px] " src="./images/1000-hills-logo.png" alt="">
             <p class="text-lg max-sm:text-sm max-sm:px-2 mt-4 text-center font-semithin">Our programs aims to deliver an enjoyable and <br> excellent learn to play experience with quality <br> teaching. </p>
         </section>
 
+        <!-- offered-programs-section -->
         <section
             class="programs grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 mt-28 gap-2 w-11/12 m-auto">
+            <!-- card-1 -->
             <div class="service-cards border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div class="pt-4 pb-16 text-center">
                     <i class="text-8xl ser-svg text-[#f26522] my-4 fa-solid fa-volleyball"></i>
@@ -119,6 +123,7 @@
                     </a>
                 </div>
             </div>
+            <!-- card-2 -->
             <div class="service-cards border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div class="pt-4 pb-16 text-center">
                     <i class="text-8xl ser-svg text-[#f26522] my-4 fa-solid fa-football"></i>
@@ -131,6 +136,7 @@
                     </a>
                 </div>
             </div>
+            <!-- card-3 -->
             <div class="service-cards border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div class="pt-4 pb-16 text-center">
                     <i class="text-8xl ser-svg text-[#f26522] my-4 fa-solid fa-bowling-ball"></i>
@@ -143,6 +149,7 @@
                     </a>
                 </div>
             </div>
+            <!-- card-4 -->
             <div class="service-cards border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div class="pt-4 pb-16 text-center">
                     <i class="text-8xl ser-svg text-[#f26522] my-4 fa-solid fa-basketball"></i>
@@ -157,22 +164,28 @@
             </div>
         </section>
 
+        <!-- club-mission-section -->
         <section class="flex lg:flex-row flex-col mt-24 max-lg:py-6">
+            <!-- img-container -->
             <div class="lg:w-6/12 w-full service-img-1 bg-cover lg:h-[120vh] h-[90vh]">
             </div>
+            <!-- content-container -->
             <div class="lg:w-6/12 flex flex-col gap-8 w-full pl-8">
+                <!-- header -->
                 <div
                     class="lg:border-l-[10px] border-l-[5px] flex flex-col gap-2 w-8/12 border-black mt-10 lg:pl-6 pl-2">
                     <p class="lg:text-[24px] text-md font-thin">MISSION</p>
                     <h1 class="lg:text-7xl md:text-6xl text-4xl font-[650]">OUR CLUB <br> <span class="text-[#f26522]"> PRINCIPLES</span>
                     </h1>
                 </div>
+                <!-- content -->
                 <p class="w-10/12 text-2xl max-sm:text-xl  italic font-medium">The club runs a number of different sessions which all take place in our excellent indoor rugby court.</p>
                 <div class=" flex flex-col gap-2">
                     <p><i class="text-[#f26522] fa-solid fa-circle-check"></i>  Various rugby training programs</p>
                     <p><i class="text-[#f26522] fa-solid fa-circle-check"></i>  Individual coaching and development</p>
                     <p><i class="text-[#f26522] fa-solid fa-circle-check"></i>  School holiday camps</p>
                 </div>
+                <!-- subscription-btns -->
                 <div class="flex lg:flex-row md:flex-row gap-3 flex-col">
                     <a href="#">
                         <button class=" text-white bg-[#f26522] border-2 border-[#f26522] py-4 px-8 rounded-md text-sm font-semibold">
@@ -188,10 +201,14 @@
             </div>
         </section>
 
+        <!-- offerd-services-section -->
         <section class="flex lg:flex-row-reverse flex-col">
+            <!-- img-container -->
             <div class="lg:w-6/12 w-full service-img-2 bg-cover lg:h-[120vh] h-[90vh]">
             </div>
+            <!-- services -->
             <div class="lg:w-6/12 flex flex-col justify-evenly w-full py-6">
+                <!-- service-1 -->
                 <div class="flex max-sm:flex-col gap-10 w-8/12 mx-auto">
                     <div>
                         <i class="text-6xl ser-svg text-[#f26522] my-4 fa-solid fa-volleyball"></i>
@@ -202,6 +219,7 @@
                     </div>
                 </div>
                 <div class="border border-gray-300 w-8/12 mx-auto my-6"></div>
+                <!-- service-2 -->
                 <div class="flex max-sm:flex-col gap-10 w-8/12 mx-auto">
                     <div>
                         <i class="text-6xl ser-svg text-[#f26522] my-4 fa-solid fa-football"></i>
@@ -212,6 +230,7 @@
                     </div>
                 </div>
                 <div class="border border-gray-300 w-8/12 mx-auto my-6"></div>
+                <!-- service-3 -->
                 <div class="flex max-sm:flex-col gap-10 w-8/12 mx-auto">
                     <div>
                         <i class="text-6xl ser-svg text-[#f26522] my-4 fa-solid fa-bowling-ball"></i>
@@ -224,6 +243,7 @@
             </div>
         </section>
 
+        <!-- section with fixed img -->
         <section class="fixed-image max-lg:flex max-lg:justify-center max-lg:items-center border border-transparent bg-cover lg:h-[120vh] h-[70vh] ">
             <div
                 class="border-l-[10px] flex flex-col gap-2 lg:w-8/12 md:w-8/12 sm:w-8/12 w-10/12 border-white-500 lg:mt-44 pl-2 ml-2 text-white">
@@ -233,8 +253,10 @@
             </div>
         </section>
 
+        <!-- Programs section -->
         <section
             class="programs grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 lg:-mt-24 mt-28 gap-2 w-11/12 m-auto">
+            <!-- program-1 -->
             <div class="border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div>
                     <img class="w-full rounded-t-2xl" src="./images/program-img-1.jpg" alt="">
@@ -244,6 +266,7 @@
                     <p class="text-2xl font-[650] w-6/12">PRO PLACEMENT PROGRAM</p>
                 </div>
             </div>
+            <!-- program-2 -->
             <div class="border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div>
                     <img class="w-full rounded-t-2xl" src="./images/program-img-2.jpg" alt="">
@@ -253,6 +276,7 @@
                     <p class="text-2xl font-[650] w-6/12">ACADEMY DEVELOPMENT</p>
                 </div>
             </div>
+            <!-- program-3 -->
             <div class="border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div>
                     <img class="w-full rounded-t-2xl" src="./images/program-img-3.jpg" alt="">
@@ -262,6 +286,7 @@
                     <p class="text-2xl font-[650] w-6/12">SPECIALIST PROGRAM</p>
                 </div>
             </div>
+            <!-- program-4 -->
             <div class="border border-gray-300 rounded-2xl flex flex-col lg:w-[90%] mx-auto w-full hover:shadow-2xl">
                 <div>
                     <img class="w-full rounded-t-2xl" src="./images/program-img-4.jpg" alt="">
@@ -273,19 +298,25 @@
             </div>
         </section>
 
+        <!-- small about section -->
         <section class="flex">
             <div class="flex flex-col w-8/12">
+                <!-- header -->
                 <div class="border-l-[10px] flex flex-col gap-2 lg:w-8/12 w-full border-black mt-32 ml-4 pl-4">
                     <p class="lg:text-[24px] sm:text-[24px] md:text-[24px] text-[16px] font-thin">ABOUT US</p>
-                    <h1 class="lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-[650]"> WE OFFER THE HIGHEST LEVEL COACHING AND SKILLS <span
-                            class="text-[#f26522]">GROWTH</span></h1>
+                    <h1 class="lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-[650]"> WE OFFER THE HIGHEST LEVEL COACHING AND SKILLS 
+                        <span class="text-[#f26522]">GROWTH</span>
+                    </h1>
                 </div>
+                <!-- content -->
                 <div class="flex lg:flex-row flex-col gap-10 ml-4 mt-10">
+                    <!-- vid -->
                     <div>
                         <video controls width="auto" height="auto" class="rounded-2xl ">
                             <source src="https://www.youtube.com/watch?v=yTiyuVrVrv4">
                         </video>
                     </div>
+                    <!-- texts -->
                     <div class="lg:w-5/12 w-full">
                         <p class="font-thin text-sm mb-2">During the school year, we offer a variety of different
                             types of structured classes that run in consecutive 5-week sessions. Click the session links
@@ -302,8 +333,11 @@
             </div>
         </section>
 
+        <!-- Testimonial section -->
         <section class="flex lg:flex-row flex-col mt-24">
+            <!-- the half with the img -->
             <div class="lg:w-6/12 w-full first-half bg-cover lg:h-[120vh] h-[60vh] md:h-[100vh]"></div>
+            <!-- the half with the testimonial -->
             <div class="lg:w-6/12 w-full flex justify-center items-center second-half bg-cover lg:h-[120vh] h-[70vh]">
                 <div class="color-overlay absolute lg:w-6/12 w-full lg:h-[120vh] h-[70vh] bg-[#006838] opacity-60">
                 </div>
@@ -321,9 +355,11 @@
     </main>
 
     <footer class="lg:w-full px-4 flex lg:flex-row flex-col text-white bg-black lg:h-[60vh]">
+        <!-- logo -->
         <div class="footer-logo lg:w-2/12 lg:mx-8 lg:-mt-2 w-full flex pt-20 max-lg:pt-14">
             <img class="lg:w-[150px] h-[100px]  w-[150px] h-[150px]" src="./images/1000-hills-logo.png" alt="Logo">
         </div>
+        <!-- first li -->
         <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info pt-20 max-lg:pt-8">
             <p class="text-lg font-bold">TEAM</p>
             <ul class="mt-9 text-[#6d6e71] w-10/12 text-sm font-thin flex flex-col gap-1  ">
@@ -334,6 +370,7 @@
                 <li class="hover:text-white"><a href="#">GALLERY</a></li>
             </ul>
         </div>
+        <!-- second li -->
         <div class="lg:w-3/12 w-full flex flex-col footer-info pt-20 max-lg:pt-8">
             <p class="flex text-lg font-bold">CLUB</p>
             <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
@@ -344,6 +381,7 @@
                 <li class="hover:text-white"><a href="./contact.html">CONTACT</a></li>
             </ul>
         </div>
+        <!-- contact info -->
         <div class="flex flex-col lg:w-4/12 w-full">
             <div class="flex flex-col footer-info pt-20 max-lg:pt-8">
                 <p class="flex text-lg font-bold">CONTACT</p>

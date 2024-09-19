@@ -24,21 +24,45 @@
 </style>
 
 <body>
-    <nav
-        class="navbar top-0 left-0 w-[100%] z-10 h-[10vh] flex justify-between items-center py-1 px-2 text-[#fff] fixed">
-        <div class="navbar-logo w-2/12 ">
-            <a href="./index.html"><img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png"
-                    alt="Logo"></a>
-            <!-- Replace with your logo -->
+    <nav class="navbar top-0 left-0 w-[100%] z-10 h-[10vh] flex justify-between items-center py-1 px-2 text-[#fff] fixed">
+        <div class="navbar-logo w-2/12">
+            <a href="./index.html">
+                <img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png" alt="Logo">
+            </a>
         </div>
+    
         <ul class="flex lg:space-x-4 font-thin w-8/12 uppercase gap-2 text-sm ">
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
+            <li class="list-2">
+                <a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">About</a>
+                <!-- Hidden dropdown menu -->
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">COACHES</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">Community</a>
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">HISTORY</a></li>
+                    <li><a href="#">PROGRAM</a></li>
+                </ul>
+            </li>
+            <li class="list-2 relative">
+                <a class="hover:text-[#006838] hover:text-lg" href="#">Results</a>
+                <ul class="drop-down hidden absolute bg-white text-black">
+                    <li><a href="./results.html">TEAM RESULTS</a></li>
+                    <li><a href="./services.html">SERVICES</a></li>
+                    <li><a href="./booking.html">BOOKING FORM</a></li>
+                    <li><a href="./events.html">EVENTS & SCHEDULE</a></li>
+                </ul>
+            </li>
         </ul>
+        <!-- Social Icons and other sections remain unchanged -->
         <div class="flex w-2/12 list-1">
             <ul class="flex lg:gap-6 gap-2 justify-center items-center text-md ">
                 <li class="list-2">
@@ -64,35 +88,10 @@
                 </li>
             </ul>
         </div>
-
-        <div class="relative icon-1 lg:hidden">
-            <!-- Hidden Checkbox for Toggle -->
-            <input type="checkbox" id="menu-toggle" class="hidden">
-
-            <!-- Label as Menu Icon -->
-            <label for="menu-toggle" class="cursor-pointer text-2xl">
-                <i class="icon-1 lg:hidden text-black text-xl pr-3 fa-solid fa-bars"></i>
-            </label>
-
-            <!-- Hidden Menu -->
-            <div id="menu"
-                class="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-lg mt-2 w-48 hidden">
-                <ul class="flex flex-col text-left">
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a>
-                    </li>
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
     </nav>
 
     <main>
+        <!-- Slideshow Container -->
         <section class="events-home-page bg-cover bg-no-repeat h-[100vh]  max-w-full grid grid-cols-12 items-center ">
             <div class="text-container border-l-[10px] flex flex-col gap-2 col-span-9 border-white-500 pl-2 text-white">
                 <p class="text-[20px] font-thin">SCHEDULE & EVENTS</p>
@@ -102,21 +101,28 @@
             </div>
         </section>
 
+        <!--logo + text-section -->
         <section class="flex flex-col items-center mt-24">
             <img class="lg:w-[200px] w-[150px] lg:h-[200px] h-[150px]" src="./images/1000-hills-logo.png" alt="">
-            <p class="lg:text-lg text-sm mt-4 text-center font-semithin">Stay up-to-date on all the best upcoming rugby <br> events
-                all year long</p>
+            <p class="lg:text-lg text-sm mt-4 text-center font-semithin">
+                Stay up-to-date on all the best upcoming rugby <br> events all year long                
+            </p>
         </section>
 
+        <!-- event-section -->
         <section class="my-48 lg:ml-6 ml-2">
+            <!-- events header -->
             <div class="border-l-[10px] flex my-16 flex-col gap-2 col-span-9 border-black pl-2">
                 <p class="font-semibold">WHAT'S HAPPENING</p>
                 <h1 class="text-5xl font-[650]">CLUB
                     <span class="text-[#6d6e71]">EVENTS</span>
                 </h1>
             </div>
+            <!-- upcoming events -->
             <div class="flex lg:flex-row justify-center items-center flex-col gap-6">
+                <!-- matches -->
                 <div class="lg:w-8/12 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-6">
+                    <!-- match-1 -->
                     <div
                         class="flex lg:flex-row flex-col items-center bg-white text-white rounded-xl justify-between w-full hover:shadow-2xl border border-[#6d6e71]">
                         <div
@@ -136,6 +142,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- match-2 -->
                     <div
                         class="flex lg:flex-row flex-col items-center bg-white text-white rounded-xl justify-between  w-full hover:shadow-2xl border border-[#6d6e71]">
                         <div
@@ -155,6 +162,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- match-3 -->
                     <div
                         class="flex lg:flex-row flex-col items-center bg-white text-white rounded-xl justify-between  w-full hover:shadow-2xl border border-[#6d6e71]">
                         <div
@@ -174,6 +182,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- match-4 -->
                     <div
                         class="flex lg:flex-row flex-col items-center bg-white text-white rounded-xl justify-between  w-full hover:shadow-2xl border border-[#6d6e71]">
                         <div
@@ -194,6 +203,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- kids events -->
                 <div class="lg:w-4/12 pt-48 pl-4 event-kids-img bg-cover w-full rounded-2xl">
                     <p class="text-md font-semibold">22/NOV</p>
                     <p class="text-3xl font-bold">RUGBY CLASSES <br> FOR KIDS</p>
@@ -201,15 +211,19 @@
             </div>
         </section>
 
+        <!-- events-table-section -->
         <section class="mb-14">
+            <!-- table-section-header -->
             <div class="border-l-[10px] w-11/12 mx-auto flex my-16 flex-col gap-2 col-span-9 border-black pl-2">
                 <p class="font-semibold">TRAINING SESSIONS</p>
                 <h1 class="text-5xl font-[650]">WEEKLY
                     <span class="text-[#6d6e71]">SCHEDULE</span>
                 </h1>
             </div>
+            <!-- events-table -->
             <div class="border-2 w-11/12 mx-auto border-black rounded-2xl">
                 <table class="w-full">
+                    <!-- monday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">MONDAY</th>
@@ -253,6 +267,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- tuesday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">TUESDAY</th>
@@ -296,6 +311,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- wednesday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">WEDNESDAY</th>
@@ -339,6 +355,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- thursday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">THURSDAY</th>
@@ -382,6 +399,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- friday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">FRIDAY</th>
@@ -425,6 +443,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- saturday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">SATURDAY</th>
@@ -468,6 +487,7 @@
                             </td>
                         </tr>
                     </div>
+                    <!-- sunday -->
                     <div>
                         <tr class="border-b border-gray-300">
                             <th class="py-3 pl-5 text-3xl flex justify-start">SUNDAY</th>
@@ -518,9 +538,11 @@
     </main>
 
     <footer class="lg:w-full px-4 flex lg:flex-row flex-col text-white bg-black lg:h-[60vh]">
+        <!-- logo -->
         <div class="footer-logo lg:w-2/12 lg:mx-8 lg:-mt-2 w-full flex pt-20 max-lg:pt-14">
             <img class="lg:w-[150px] h-[100px]  w-[150px] h-[150px]" src="./images/1000-hills-logo.png" alt="Logo">
         </div>
+        <!-- first li -->
         <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info pt-20 max-lg:pt-8">
             <p class="text-lg font-bold">TEAM</p>
             <ul class="mt-9 text-[#6d6e71] w-10/12 text-sm font-thin flex flex-col gap-1  ">
@@ -531,6 +553,7 @@
                 <li class="hover:text-white"><a href="#">GALLERY</a></li>
             </ul>
         </div>
+        <!-- second li -->
         <div class="lg:w-3/12 w-full flex flex-col footer-info pt-20 max-lg:pt-8">
             <p class="flex text-lg font-bold">CLUB</p>
             <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
@@ -541,6 +564,7 @@
                 <li class="hover:text-white"><a href="./contact.html">CONTACT</a></li>
             </ul>
         </div>
+        <!-- contact info -->
         <div class="flex flex-col lg:w-4/12 w-full">
             <div class="flex flex-col footer-info pt-20 max-lg:pt-8">
                 <p class="flex text-lg font-bold">CONTACT</p>

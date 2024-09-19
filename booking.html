@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US</title>
+    <title>HOME PAGE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
@@ -93,22 +93,105 @@
 
     <main>
         <!-- Slideshow Container -->
-        <section
-            class="contact-home-page bg-cover bg-no-repeat h-[100vh] max-w-full grid grid-cols-12 items-center ">
+        <section class="booking-home-page bg-cover bg-no-repeat h-[100vh]  max-w-full grid grid-cols-12 items-center ">
             <div class="text-container border-l-[10px] flex flex-col gap-2 col-span-9 border-white-500 pl-2 text-white">
-                <p class="text-[20px] font-thin">CONTACT US</p>
-                <h1 class="lg:text-8xl text-6xl font-[650]">GET IN <br> <span class="text-[#006838]">TOUCH</span></h1>
+                <p class="text-[20px] font-thin">RUGBY COURTS</p>
+                <h1 class="lg:text-8xl text-7xl font-[650]">BOOK A <br> <span class="text-[#6d6e71]">COURT</span>
+                </h1>
             </div>
         </section>
 
-        <!--logo + text-section -->
-        <section class="flex flex-col items-center lg:h-[45vh] h-[25vh] lg:mt-24 mt-12">
-            <img class="lg:w-[200px] w-[150px] lg:h-[200px] h-[150px]" src="./images/1000-hills-logo.png" alt="">
-            <p class="lg:text-lg text-sm mt-4 text-center font-semithin">We are dedicated to maintaining the highest <br> possible levels of customer service.</p>
+        <!-- small about section -->
+        <section class="flex lg:flex-row flex-col">
+            <div class="flex flex-col lg:w-8/12 w-full">
+                <!-- header -->
+                <div class="border-l-[10px] flex flex-col gap-2 lg:w-8/12 w-full border-black mt-32 ml-4 pl-4">
+                    <p class="lg:text-[24px] sm:text-[24px] md:text-[24px] text-[16px] font-thin">ABOUT US</p>
+                    <h1 class="lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-[650]"> WE OFFER THE HIGHEST LEVEL
+                        COACHING AND SKILLS
+                        <span class="text-[#6d6e71]">GROWTH</span>
+                    </h1>
+                </div>
+                <!-- content -->
+                <div class="flex lg:flex-row flex-col gap-10 ml-4 mt-10">
+                    <!-- vid -->
+                    <div>
+                        <video controls width="auto" height="auto" class="rounded-2xl ">
+                            <source src="https://www.youtube.com/watch?v=yTiyuVrVrv4">
+                        </video>
+                    </div>
+                    <!-- text -->
+                    <div class="lg:w-5/12 w-full">
+                        <p class="font-thin text-sm mb-2">During the school year, we offer a variety of different
+                            types of structured classes that run in consecutive 5-week sessions. Click the session links
+                            on this page to display our available schedules.
+                        </p>
+                        <button class="uppercase font-bold whitespace-nowrap">
+                            <i class="text-[#6d6e71] fa-solid fa-arrow-right-long mr-2"></i>
+                            Read more
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- form-section-content -->
+            <div class="lg:w-4/12 w-full mt-32 mr-4">
+                <!-- the form -->
+                <div class="w-full mx-auto">
+                    <form class="contact-form grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-14">
+                        <div class="flex flex-col">
+                            <input type="text" placeholder="First Name*">
+                        </div>
+                        <div class="flex flex-col">
+                            <input type="text" placeholder="Last Name*">
+                        </div>
+                        <div class="flex flex-col">
+                            <input type="email" placeholder="Email*">
+                        </div>
+                        <div class="flex flex-col">
+                            <input type="tel" placeholder="Mobile">
+                        </div>
+                        <div class="flex flex-col">
+                            <input type="date" placeholder="Pick a date">
+                        </div>
+                        <div class="border-b border-gray-500">
+                            <label for="time">Pick a time</label>
+                            <select id="time">
+                                <option class="px-4" value="."> </option>
+                                <option class="px-4" value="10">10 AM</option>
+                                <option class="px-4" value="11">11 AM</option>
+                                <option class="px-4" value="12">12 AM</option>
+                                <option class="px-4" value="1">1 AM</option>
+                                <option class="px-4" value="2">2 AM</option>
+                            </select>
+                        </div>
+                        <div class="border-b border-gray-500">
+                            <label for="time">No. of players</label>
+                            <select id="time">
+                                <option class="px-4" value="."> </option>
+                                <option class="px-4" value="10">1</option>
+                                <option class="px-4" value="11">2</option>
+                                <option class="px-4" value="12">3</option>
+                                <option class="px-4" value="1">4</option>
+                            </select>
+                        </div>
+                        <div class="border-b border-gray-500">
+                            <label for="time">Select a court</label>
+                            <select id="time">
+                                <option class="px-4" value="."> </option>
+                                <option class="px-4" value="10">Grass</option>
+                                <option class="px-4" value="11">Clay</option>
+                                <option class="px-4" value="12">Hard</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Please write your enquiry*"></textarea>
+                        <input class="bg-[#6d6e71] border py-2 border-[#6d6e71] rounded-md text-white hover:shadow-xl"
+                            type="submit">
+                    </form>
+                </div>
+            </div>
         </section>
 
-        <!-- contact+map-section -->
-        <section class="flex lg:flex-row flex-col my-24 bg-[#080808] h-[120vh]">
+        <section class="flex lg:flex-row flex-col mt-24 bg-[#080808] h-[120vh]">
             <!-- map-section -->
             <div class="lg:w-6/12 w-full">
                 <div class="map-container">
@@ -119,22 +202,22 @@
             <div class="lg:w-6/12 bg-[#080808] w-full flex flex-col pl-16 py-24 ">
                 <!-- header -->
                 <div class="border-l-[10px] flex flex-col gap-2 col-span-9 border-white-500 pl-2 text-white">
-                    <h1 class="lg:text-8xl text-7xl font-[650]">1000 HILLS <br> <span class="text-[#006838]">RUGBY</span></h1>
+                    <h1 class="lg:text-8xl text-7xl font-[650]">1000 HILLS <br> <span class="text-[#6d6e71]">RUGBY</span></h1>
                 </div>
                 <!-- contact-details -->
                 <div class="flex lg:flex-row md:flex-row flex-col md:gap-10 text-white my-10">
                     <div class="flex flex-col">
                         <p class="text-sm">CALL US</p>
                         <div class="flex gap-4">
-                            <i class="text-[#006838] hover:text-white text-2xl fa-solid fa-phone"></i>
+                            <i class="text-[#6d6e71] hover:text-white text-2xl fa-solid fa-phone"></i>
                             <p class="text-2xl font-bold">88 700 600</p>
                         </div>
                     </div>
-                    <p class="sm:hidden border border-[#006838] h-16 mx-10"></p>
+                    <p class="sm:hidden border border-[#6d6e71] h-16 mx-10"></p>
                     <div class="flex flex-col">
                         <p class="text-sm">ONLINE SCHEDULE</p>
                         <div class="flex gap-4">
-                            <i class="text-[#006838] hover:text-white text-2xl fa-regular fa-calendar"></i>
+                            <i class="text-[#6d6e71] hover:text-white text-2xl fa-regular fa-calendar"></i>
                             <p class="text-2xl font-bold">BOOK HERE</p>
                         </div>
                     </div>
@@ -163,81 +246,19 @@
                 <!-- more-details -->
                 <div class="flex text-white my-10 pr-4">
                     <div class="w-4/12 flex flex-col gap-2">
-                        <p class="text-[#006838] font-bold text-xl">OUR ADRESS</p>
+                        <p class="text-[#6d6e71] font-bold text-xl">OUR ADRESS</p>
                         <p>KK 591 ST</p>
                     </div>
                     <div class="w-4/12 flex flex-col gap-2">
-                        <p class="text-[#006838] font-bold text-xl">CALL US</p>
+                        <p class="text-[#6d6e71] font-bold text-xl">CALL US</p>
                         <p>+88 7000 600</p>
                         <p>+88 998 700 2</p>
                     </div>
                     <div class="w-4/12 flex flex-col gap-2">
-                        <p class="text-[#006838] font-bold text-xl">OPENING HOURS</p>
+                        <p class="text-[#6d6e71] font-bold text-xl">OPENING HOURS</p>
                         <p>Mon-Fri: 10am – 6pm</p>
                         <p>Sat-Sun: 10am – 10pm</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- form-section -->
-        <section class="flex lg:flex-row lg:mt-52 flex-col">
-            <!-- form-section-content -->
-            <div class="lg:w-5/12 w-full gap-6 flex flex-col pl-6">
-                <p class="text-2xl italic font-medium">The feedback of our members and supporters is important to us and we are dedicated to maintaining the highest possible levels of customer service.</p>
-                <p class="font-thin">To help us to best communicate with you, please provide us with your full name, phone number, email address and postal address whenever you contact us by email or post.</p>
-            </div>
-            <!-- the form -->
-            <div class="lg:w-7/12 w-full mx-auto px-10">
-                <form class="contact-form grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-14">
-                    <div class="flex flex-col">
-                        <input type="text" placeholder="First Name*">
-                        <p class="pt-[8px] text-[#006838] text-sm font-thin">The field is required</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <input type="text" placeholder="Last Name*">
-                        <p class="pt-[8px] text-[#006838] text-sm font-thin">The field is required</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <input type="email" placeholder="Email*">
-                        <p class="pt-[8px] text-[#006838] text-sm font-thin">The field is required</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <input type="tel" placeholder="Mobile">
-                        <p class="pt-[8px] text-[#006838] text-sm font-thin">The field is required</p>
-                    </div>
-                    <textarea placeholder="Please write your enquiry*"></textarea>
-                    <input class="bg-[#006838] border py-2 border-[#006838] rounded-md text-white hover:shadow-xl" type="submit">
-                </form>
-            </div>
-        </section>
-
-        <!-- online-community -->
-        <section class="contact-last bg-cover flex lg:flex-row flex-col w-full h-[100vh] bg-no-repeat">
-            <!-- text -->
-            <div class="w-7/12 flex pt-72 pl-6 mb-28">
-                <div class="border-l-[10px] flex flex-col gap-2 col-span-9 border-white-500 pl-4 text-white">
-                    <p class="text-[28px] font-thin">FOLLOW THR</p>
-                    <h1 class="text-7xl uppercase font-[650]">#1000 hills <br> rugby</h1>
-                </div>
-            </div>
-            <!-- numbers -->
-            <div class="w-5/12 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 pt-72 text-white">
-                <div>
-                    <p class="text-6xl font-bold">321K+</p>
-                    <p class="text-xl">FACEBOOK</p>
-                </div>
-                <div>
-                    <p class="text-6xl font-bold">500+</p>
-                    <p class="text-xl">TWITTER</p>
-                </div>
-                <div>
-                    <p class="text-6xl font-bold">1K+</p>
-                    <p class="text-xl">INSTAGRAM</p>
-                </div>
-                <div>
-                    <p class="text-6xl font-bold">100+</p>
-                    <p class="text-xl">YOUTUBE</p>
                 </div>
             </div>
         </section>
